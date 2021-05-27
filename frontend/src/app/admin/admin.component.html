@@ -1,0 +1,126 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+ <body>
+
+  <div>
+
+    <div class="row">
+      <div class=" col-md-12 text-*-left" style="background-color:#22B0DD">
+        <h2 id="policeEtud"> <img src="https://img.icons8.com/metro/452/reviewer-male.png" id="img"> <a href="#"
+          id="ahrefEtud"> Espace Administrateur </a></h2>
+      </div>
+    </div>
+
+     <div class="row">
+            <div class="col-md-3">
+              <div class="row mt-3 container-sm text-*-center"style="background-color:#22B0DD">
+                <div id="top">{{nomUser}} {{prenomUser}} </div>
+              </div>
+
+
+              <div class="row btn btn-lg mt-4 container-sm barreDec"style="background-color:#22B0DD">
+                <br><br><br>
+        <a href="#" id="deconnexion"><button id="button">
+            <p><img src="https://icons-for-free.com/iconfiles/png/512/finance+money+icon-1320167749140141327.png"
+                id="buttondeconnexion">Finance </p>
+          </button></a>
+        <br><br><br><br>
+        <a href="#" id="deconnexion"><button id="button">
+          <p><img src="https://latelierduformateur.fr/wp-content/uploads/2017/07/computer-icon-2429310_1920-300x300.png"
+              id="buttondeconnexion"> Etudiant </p>
+        </button></a><br><br><br><br>
+
+
+        <a href="#" id="deconnexion"><button id="button">
+          <p><img src="https://image.flaticon.com/icons/png/512/65/65882.png" id="buttondeconnexion"> Formateur </p>
+        </button></a><br><br>
+      <br><br><br>
+                <a href="#" id="deconnexion"><button id="button">
+                  <p><img src="https://image.flaticon.com/icons/png/512/64/64495.png" id="buttondeconnexion"> Gestion </p>
+                </button></a>
+                <button  class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+ <!--            <a class="dropdown-item" [routerLink]="['/admin/id']" href="#">   Liste    des utilisateurs</a> -->
+            <a class="dropdown-item" [routerLink]="['/modification']" href="#"> Modifier  un utilisateur</a>
+            <a class="dropdown-item" [routerLink]="['/inscription']" href="#">Ajouter un utilisateur</a>
+          </div>
+        </button >
+
+
+                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <a [routerLink]="['/login']" class="Deconnexion">
+                  <p><img
+                      src="https://library.kissclipart.com/20181201/ae/kissclipart-dconnexion-icon-clipart-computer-icons-a5e702d3a1f49f3a.png"
+                      id="buttondeconnexion"> Deconnexion </p>
+                </a>
+                <br><br><br><br>
+              </div>
+            </div>
+            <br><br><br>
+
+
+
+      <div class="col-md-9"style=" margin-top: 85px;">
+
+        <div *ngFor="let user of allUser">
+
+        <div class="container">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Role</th>
+                <th>email</th>
+                <th>action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{user.Nom}}</td>
+                <td>{{user.Prenom}}</td>
+                <td>{{user.role}}</td>
+                <td>{{user.email}}</td>
+                <td>  <button [routerLink]="['/modification']"type="button" class="btn btn-primary">Modifier</button> </td>
+                <td> <button type="button" class="btn btn-danger" (click)="Supprimer(user)">Supprimer</button> </td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+      </div>
+
+    </div>
+
+    <div>
+      <p id="info">
+        Si vous voulez plus d'information rendez vous sur ce lien:<a
+          href="https://www.blacmi.toutachatsn.com/realisations/"> Cliquez-ici</a>
+      </p>
+    </div>
+    <div class="jumbotron text-center" id="header">
+      <div>
+        <a href="#">
+          <p id="copyright"> hakassa@copyright</p>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+	/* Coded with love by Hakassa */
+	@import "https://pro.fontawesome.com/releases/v5.10.0/css/all.css";
+
+	body,
+	html {
+	  margin: 0;
+	  padding: 0;
+	  height: 100%;
+	  background: #667474 !important;
+	}
+
+	p {
+	  background-color: rgb(241, 239, 239) !important;
+	  margin: 10px !important;
+	  padding: auto;
+	  width: 80%;
+	  border-radius: 75px;
+	}
+
+	#user_card {
+	  top: 75px;
+	  border-radius: 20px;
+	  width: 320px;
+	  margin-top: auro;
+	  margin-bottom: auto;
+	  background: #22B0DD;
+	  position: relative;
+	  display: flex;
+	  justify-content: center;
+	  flex-direction: column;
+	  padding: 9.5px;
+
+	}
+
+	.fa-google {
+	  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+	  color: transparent;
+	  -webkit-text-fill-color: transparent;
+	}
+
+	.input-group {
+	  padding: 0 1.5rem;
+	  border-radius: 50px;
+
+	}
+
+	#brand_logo {
+	  bottom: 280px;
+	  position: absolute;
+	  height: 100px;
+	  width: 150px;
+	  border-radius: 50%;
+
+	}
+
+	.form-group .form-control {
+	  padding-left: 2.375rem;
+
+	}
+
+	.mb-0 {
+	  padding: 0 1.35rem;
+	}
+
+	.mb-1 {
+	  padding: 0 1.35rem;
+	}
+
+	.mb-2 {
+	  padding: 0 1.35rem;
+	}
+
+	.form-group .form-control-icon {
+	  position: absolute;
+	  z-index: 2;
+	  display: block;
+	  width: 2.375rem;
+	  height: 2.375rem;
+	  line-height: 2.375rem;
+	  text-align: center;
+	  pointer-events: none;
+	  color: rgb(2, 2, 2);
+	}
+
+	.form_container {
+	  margin-top: 130px;
+	}
+
+	.login_btn {
+	  border-radius: 20px;
+	  width: 200%;
+	  background: #000000 !important;
+	  color: white !important;
+	  padding: top 5px;
+	}
+
+
+	.login_container {
+	  padding: 0 1.35rem;
+	  border-radius: 50px;
+	}
+
+	.d-flex justify-content-center links {
+	  text-align: left;
+	}
+
+	.input-icons svg {
+	  width: 26px;
+	  float: left;
+	}
+
+	.input-icons {
+	  width: 100%;
+	  margin-bottom: 10px;
+	}
+
+	.input-icons input {
+	  margin: 0 10px;
+	}
+
+	.icon {
+	  padding: 10px;
+	  min-width: 40px;
+	}
+
+	.input-field {
+	  width: 100%;
+	  padding: 10px;
+	  text-align: center;
+	}
