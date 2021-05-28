@@ -23,8 +23,8 @@ export class ModificationComponent implements OnInit {
   console.log(this.id)
   this.LoginService.recevoir(this.id).subscribe((resultat)=>{
   this.dataUser=resultat
-  this.nomUser=this.dataUser.nom
-  this.prenomUser=this.dataUser.prenom
+  this.nomUser=this.dataUser.Nom
+  this.prenomUser=this.dataUser.Prenom
   this.roleUser=this.dataUser.role
   this.telUser=this.dataUser.tel
   console.log(resultat)
@@ -36,7 +36,7 @@ export class ModificationComponent implements OnInit {
   connecter(f: { value: object; }){
     console.log("hello")
     console.log(f.value)
-    return this.LoginService.donne(f.value).subscribe((resultat:any)=>{
+    return this.LoginService.modifier(f.value).subscribe((resultat:any)=>{
       console.log(resultat)
       //this.router.navigate(['admin/'+this.id])
   })

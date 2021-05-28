@@ -17,8 +17,8 @@ exports.router = (function() {
   apiRouter.route('/users/all').get(usersCtrl.list);
   apiRouter.route('/users/supprimer').post(usersCtrl.supp);
  
- // apiRouter.route('/users/modifier/').post(usersCtrl.modifier);
-  //apiRouter.route('/users/detail/').post(usersCtrl.detail);
+  apiRouter.route('/users/modifier/').post(usersCtrl.modifier);
+  apiRouter.route('/users/oublier/').post(usersCtrl.oublier);
 
   return apiRouter;
 })();

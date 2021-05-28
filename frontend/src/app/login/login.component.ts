@@ -33,8 +33,8 @@ export class LoginComponent implements OnInit {
       if(resultat.userInfo.role==="finance"){
         this.router.navigate(['finance/'+this.idUser])
       }
-      else if (resultat.userInfo.role==="Formateur") {
-        this.router.navigate(['Formateur/'+this.idUser])
+      else if (resultat.userInfo.role==="formateur") {
+        this.router.navigate(['formateur/'+this.idUser])
       }else if(resultat.userInfo.role==="etudiant"){
         this.router.navigate(['etudiant/'+this.idUser])
       }

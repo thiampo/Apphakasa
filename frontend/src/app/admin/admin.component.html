@@ -28,18 +28,18 @@
 
               <div class="row btn btn-lg mt-4 container-sm barreDec"style="background-color:#22B0DD">
                 <br><br><br>
-        <a href="#" id="deconnexion"><button id="button">
+        <a [routerLink]="['/finance/id']" id="deconnexion"><button id="button">
             <p><img src="https://icons-for-free.com/iconfiles/png/512/finance+money+icon-1320167749140141327.png"
                 id="buttondeconnexion">Finance </p>
           </button></a>
         <br><br><br><br>
-        <a href="#" id="deconnexion"><button id="button">
+        <a [routerLink]="['/etudiant/id']" id="deconnexion"><button id="button">
           <p><img src="https://latelierduformateur.fr/wp-content/uploads/2017/07/computer-icon-2429310_1920-300x300.png"
               id="buttondeconnexion"> Etudiant </p>
         </button></a><br><br><br><br>
 
 
-        <a href="#" id="deconnexion"><button id="button">
+        <a [routerLink]="['/formateur/id']" id="deconnexion"><button id="button">
           <p><img src="https://image.flaticon.com/icons/png/512/65/65882.png" id="buttondeconnexion"> Formateur </p>
         </button></a><br><br>
       <br><br><br>
@@ -48,7 +48,7 @@
                 </button></a>
                 <button  class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
- <!--            <a class="dropdown-item" [routerLink]="['/admin/id']" href="#">   Liste    des utilisateurs</a> -->
+
             <a class="dropdown-item" [routerLink]="['/modification']" href="#"> Modifier  un utilisateur</a>
             <a class="dropdown-item" [routerLink]="['/inscription']" href="#">Ajouter un utilisateur</a>
           </div>
@@ -59,7 +59,7 @@
                 <a [routerLink]="['/login']" class="Deconnexion">
                   <p><img
                       src="https://library.kissclipart.com/20181201/ae/kissclipart-dconnexion-icon-clipart-computer-icons-a5e702d3a1f49f3a.png"
-                      id="buttondeconnexion"> Deconnexion </p>
+                      id="buttondeconnexion" class="decox"> Deconnexion </p>
                 </a>
                 <br><br><br><br>
               </div>
@@ -69,8 +69,8 @@
 
 
       <div class="col-md-9"style=" margin-top: 85px;">
-
-        <div *ngFor="let user of allUser">
+<!--
+         <div *ngFor="let user of allUser">
 
         <div class="container">
 
@@ -100,10 +100,38 @@
         </div>
 
 
-      </div>
-      </div>
+      </div> -->
 
-    </div>
+        <div class="container">
+      <table  class="table mt-4 table-striped">
+        <thead>
+            <tr>
+
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Role</th>
+                <th scope="col">Email</th>
+                <th scope="col-2">Action</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text" *ngFor="let user of allUser">
+                <td>{{user.Nom}}</td>
+                <td>{{user.Prenom}}</td>
+                <td>{{user.role}}</td>
+                <td>{{user.email}}</td>
+
+                <td><i title="Modifier cet utilisateur" class="fas fa-edit fa-lg text-info" [routerLink]="['/modification/']"></i></td>
+                <td><i title="Supprimer cet utilisateur" (click)="Supprimer(user)" class="far fa-trash-alt  text-danger"></i></td>
+            </tr>
+        </tbody>
+    </table>
+
+           </div>
+
+          </div>
+          </div>
 
     <div>
       <p id="info">

@@ -30,5 +30,8 @@ supp(donne:object){
 oublier(donne:object){
   return this.webRequestService.post('oublier',donne)
 }
+modifier(donne:object){
+  return this.webRequestService.post('api/users/modifier',donne)
+}
 
 }

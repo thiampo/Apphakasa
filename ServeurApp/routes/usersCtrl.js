@@ -219,6 +219,51 @@ supp:function(req,res){
         })
     })
   
+    },
+
+   modifier:(req, res) => {
+    data = req.body
+    console.log(data)
+     Prenom = data.Prenom
+     Nom = data.Nom
+    email= data.email
+    
+  
+    let role = data.role
+    
+    models.User.update(
+        {
+            Prenom: Prenom,
+            Nom: Nom,
+            role : role,
+         
+           
+            
+        },
+       { where: { email }}
+    )
+    },
+    oublier:(req,res)=>{
+        var email
+        var user
+        email = req.body.data
+        console.log(email)
+        function entierAlea(min,max){
+            return Math.floor(Math.random() *(max - min +1)) +min;
+        }
+        var password ='user' +entierAlea(1,1000);
+        console.log(password)
+        bcrypt.genSalt(10,function(err,salt){
+            bcrypt.hash(password ,salt,(err,hash)=>{
+                //create record
+                models.userFound.update(
+                    {
+                        password:hash
+                    },
+                    {where:{email}}
+                )
+            })
+        })
     }
 
 }
@@ -253,26 +298,4 @@ sendMail = (email, password)=>{
       
 }
 // mot de pass oubier
-/* router.post('/oublier',(req,res)=>{
-    var email
-    var user
-    email = req.body.data
-    console.log(email)
-    function entierAlea(min,max){
-        return Math.floor(Math.random() *(max - min +1)) +min;
-    }
-    var password ='user' +entierAlea(1,1000);
-    console.log(password)
-    bcrypt.genSalt(10,function(err,salt){
-        bcrypt.hash(password ,salt,(err,hash)=>{
-            //create record
-            models.userFound.update(
-                {
-                    password:hash
-                },
-                {where:{email}}
-            )
-        })
-    })
-})
- */
+
