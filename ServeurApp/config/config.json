@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "database_developement_retro",
+    "username": "sembene",
+    "password": "92842",
+    "database": "sembene1",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "root",
-    "database": "database_test_retro",
+    "username": "sembene",
+    "password": "92842",
+    "database": "sembene2",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "database_production_retro",
+    "username": "sembene",
+    "password": "92842",
+    "database": "sembene3",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

@@ -10,7 +10,7 @@ const { router } = require('../apiRouter');
 //const { Router } = require('express');
 // constant 
  const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-const PASSWORD_REGEX = /^(?=.*\d).{4,8}$;/
+//const PASSWORD_REGEX = /^(?=.*\d).{4,8}$;/
  
 // Routes 
 module.exports = {
@@ -46,14 +46,14 @@ if (!userFound){
         return res.status(400).json({'error':'email non valide'})
     } 
 
-    sendMail(email, password)
+    sendMail(email, password) 
 bcrypt.hash(password,5,function(err , bcryptedPassword){
    // nouvel utilisateur
    var newUser = models.User.create({
        Nom:Nom,
        Prenom:Prenom,
        email:email,
-       tel:tel,
+      // tel:tel,
        role:role,
        password: bcryptedPassword,
       
@@ -100,7 +100,7 @@ bcrypt.compare(password,userFound.password,function(errBycrypt,resBycrypt){
     models.User.findAll().then(function(tasks){
         console.log(tasks);
         let userInfo ={
-            'userId':userFound.id,
+            'userId':userFound,
             'role':userFound.role,
              'prenom':userFound.Prenom,
             'nom':userFound.Nom,
