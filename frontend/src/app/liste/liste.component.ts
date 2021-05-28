@@ -2,7 +2,7 @@ import { LoginService } from './../login.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { any } from 'sequelize/types/lib/operators';
+//import { any } from 'sequelize/types/lib/operators';
 
 @Component({
   selector: 'app-liste',
