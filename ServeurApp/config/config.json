@@ -9,14 +9,14 @@
   "test": {
     "username": "sembene",
     "password": "92842",
-    "database": "sembene2",
+    "database": "sembene1",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "sembene",
     "password": "92842",
-    "database": "sembene3",
+    "database": "sembene1",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

@@ -35,8 +35,7 @@ export class InscriptionComponent implements OnInit {
    connecter(f: { value: object; }){
     console.log("hello")
     console.log(f.value)
-    return this.LoginService.insc(f.value).subscribe((resultat:any)=>{
-      console.log(resultat)
+  return this.LoginService.insc(f.value).subscribe((resultat:any)=>{
       this.router.navigate(['admin/'+this.id])
   })
    }

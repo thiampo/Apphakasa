@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { LoginService } from './../login.service';
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-modification',
   templateUrl: './modification.component.html',
@@ -33,6 +34,8 @@ export class ModificationComponent implements OnInit {
 
 
   }
+
+  
   connecter(f: { value: object; }){
     console.log("hello")
     console.log(f.value)

@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
 
 const options = {
   from:"mamemorthiampo@gmail.com",
-  to:"babacacthiam@gmail.com",
+  to:"babacarthiam@gmail.com",
   subject: 'Sending email with node.js!',
   text:`pass:${transporter.password}`,
   password:"Seneg@l60"
