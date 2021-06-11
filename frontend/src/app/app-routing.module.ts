@@ -23,8 +23,8 @@ const routes: Routes = [
  {path:'admin/:id',component:AdminComponent},
  {path:'ErreurSaisie',component:ErreurSaisieComponent},
  {path:'oublier',component:OublierComponent},
- {path:'modification',component:ModificationComponent},
- {path:'inscription',component:InscriptionComponent},
+ {path:'modification/:id',component:ModificationComponent},
+ {path:'inscription/:id',component:InscriptionComponent},
  {path:'liste',component:ListeComponent},
 
 ];

@@ -22,16 +22,9 @@ export class InscriptionComponent implements OnInit {
   ngOnInit(): void {
 
   this.id=this.route.snapshot.params['id']
-  this.id={value:this.id}
   console.log(this.id)
-  this.LoginService.recevoir(this.id).subscribe((resultat)=>{
-  this.dataUser=resultat
-  this.nomUser=this.dataUser.nom
-  this.prenomUser=this.dataUser.prenom
-  console.log(resultat)
-
-  })
-                 }
+  
+  }
    connecter(f: { value: object; }){
     console.log("hello")
     console.log(f.value)

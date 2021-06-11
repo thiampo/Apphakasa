@@ -24,12 +24,12 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void{
     this.id=this.route.snapshot.params['id'];
     this.id={value:this.id}
-    this.LoginService.recept().subscribe((resultat:any)=>{
+     this.LoginService.recept().subscribe((resultat:any)=>{
       this.allUser = resultat
       console.log('resultat.tasks')
       console.log(this.allUser)
-    })
-    console.log(this.id)
+    }) 
+    console.log(this.id.value)
     this.LoginService.recevoir(this.id).subscribe((resultat)=>{
     this.dataUser=resultat
     this.nomUser=this.dataUser.Nom

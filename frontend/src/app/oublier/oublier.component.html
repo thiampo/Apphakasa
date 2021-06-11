@@ -19,13 +19,13 @@
                 </div>
                 <br>
                 <div class="d-flex justify-content-center form_container">
-                    <form>
+                    <form (ngSubmit)="oublier(f)" #f="ngForm">
                        <div class="form-group mb-1">
                             <label for="uname">Adress mail</label>
                             <div class="input-group-append">
                                 <span class="fa fa-user form-control-icon"></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="exemple:XXXX@gmail.com">
+                            <input type="text" name="email" ngModel class="form-control" placeholder="exemple:XXXX@gmail.com">
                         </div>
                         <br>
 

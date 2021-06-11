@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-oublier',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OublierComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService:LoginService, private router:Router) { }
 
   ngOnInit(): void {
   }
+
+  oublier(form){
+    console.log(form.value)
+    return this.loginService.oublier(form.value).subscribe((resultat:any)=>{
+      console.log(resultat)
+      this.router.navigate(['login'])
+     
+  })
+  
+  }
+
+
 
 }

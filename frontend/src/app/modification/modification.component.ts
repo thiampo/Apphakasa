@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { LoginService } from './../login.service';
+import {Location} from '@angular/common';
 import Swal from 'sweetalert2'
 @Component({
   selector: 'app-modification',
@@ -16,7 +17,7 @@ export class ModificationComponent implements OnInit {
   prenomUser:any
   roleUser:any
   telUser:any
-  constructor(private LoginService:LoginService, private router:Router,private route:ActivatedRoute) { }
+  constructor(private LoginService:LoginService, private router:Router,private route:ActivatedRoute, private location: Location) { }
 
   ngOnInit(): void {
     this.id=this.route.snapshot.params['id']
@@ -41,8 +42,11 @@ export class ModificationComponent implements OnInit {
     console.log(f.value)
     return this.LoginService.modifier(f.value).subscribe((resultat:any)=>{
       console.log(resultat)
-      //this.router.navigate(['admin/'+this.id])
+    // this.location.back();
+     this.router.navigate(['admin/'+this.id.value])
   })
+  
+
    }
 
 }

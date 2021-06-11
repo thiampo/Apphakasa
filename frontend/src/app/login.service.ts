@@ -28,7 +28,7 @@ supp(donne:object){
   return this.webRequestService.post('api/users/supprimer',donne)
 }
 oublier(donne:object){
-  return this.webRequestService.post('oublier',donne)
+  return this.webRequestService.post('api/users/oublier',donne)
 }
 modifier(donne:object){
   return this.webRequestService.post('api/users/modifier',donne)
