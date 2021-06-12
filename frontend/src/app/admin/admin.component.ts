@@ -12,9 +12,6 @@ import Swal from 'sweetalert2'
 })
 export class AdminComponent implements OnInit {
   toastr: any;
-
-
-
   constructor(private route:ActivatedRoute, private LoginService:LoginService) { }
   id:any
   dataUser : any
