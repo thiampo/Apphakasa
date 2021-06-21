@@ -14,7 +14,7 @@
 
     <div class="row">
       <div class=" col-md-12 text-*-left" style="background-color:#22B0DD">
-        <h2 id="policeEtud"> <img src="https://img.icons8.com/metro/452/reviewer-male.png" id="img"> <a href="#"
+        <h2  id="policeEtud"> <img src="https://img.icons8.com/metro/452/reviewer-male.png" id="img"> <a href="#"
           id="ahrefEtud"> Espace Administrateur </a></h2>
       </div>
     </div>
@@ -28,18 +28,18 @@
 
               <div class="row btn btn-lg mt-4 container-sm barreDec"style="background-color:#22B0DD">
                 <br><br><br>
-        <a [routerLink]="['/finance/id']" id="deconnexion"><button id="button">
+        <a [routerLink]="['/finance',id.value]" id="deconnexion"><button id="button">
             <p><img src="https://icons-for-free.com/iconfiles/png/512/finance+money+icon-1320167749140141327.png"
                 id="buttondeconnexion">Finance </p>
           </button></a>
         <br><br><br><br>
-        <a [routerLink]="['/etudiant/id']" id="deconnexion"><button id="button">
+        <a [routerLink]="['/etudiant',id.value]" id="deconnexion"><button id="button">
           <p><img src="https://latelierduformateur.fr/wp-content/uploads/2017/07/computer-icon-2429310_1920-300x300.png"
               id="buttondeconnexion"> Etudiant </p>
         </button></a><br><br><br><br>
 
 
-        <a [routerLink]="['/formateur/id']" id="deconnexion"><button id="button">
+        <a [routerLink]="['/formateur',id.value]" id="deconnexion"><button id="button">
           <p><img src="https://image.flaticon.com/icons/png/512/65/65882.png" id="buttondeconnexion"> Formateur </p>
         </button></a><br><br>
       <br><br><br>
@@ -55,7 +55,7 @@
         </button >
 
 
-                <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br>
                 <a [routerLink]="['/login']" class="Deconnexion">
                   <p><img
                       src="https://library.kissclipart.com/20181201/ae/kissclipart-dconnexion-icon-clipart-computer-icons-a5e702d3a1f49f3a.png"
@@ -91,7 +91,7 @@
                 <td>{{user.role}}</td>
                 <td>{{user.email}}</td>
 
-                <td><i title="Modifier cet utilisateur" class="fas fa-edit fa-lg text-info" [routerLink]="['/modification/',user.id]"></i></td>
+                <td><i title="Modifier cet utilisateur" class="fas fa-edit fa-lg text-success" [routerLink]="['/modification/',user.id]"></i></td>
                 <td><i title="Supprimer cet utilisateur" (click)="Supprimer(user)" class="far fa-trash-alt  text-danger"></i></td>
             </tr>
         </tbody>

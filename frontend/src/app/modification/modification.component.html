@@ -12,7 +12,7 @@
 
   <div>
 
-    <div class="row">
+    <div [routerLink]="['/admin',id.value]" class="row">
       <div class=" col-md-12 text-*-left" style="background-color:#22B0DD">
         <h2 id="policeEtud"> <img src="https://img.icons8.com/metro/452/reviewer-male.png" id="img"> <a href="#"
           id="ahrefEtud"> Espace Administrateur </a></h2>
@@ -28,49 +28,42 @@
 
               <div class="row btn btn-lg mt-4 container-sm barreDec"style="background-color:#22B0DD">
                 <br><br><br>
-      <a href="#" id="deconnexion">
+      <a [routerLink]="['/admin',id.value]"  href="#"  id="deconnexion">
       <button id="button">
           <p><img src="https://image.flaticon.com/icons/png/512/69/69524.png" id="buttondeconnexion"> Accueil </p>
        </button></a><br> <br>
-      <br><br><br> <!--f-->
-        <br><br>
+      <br><br> <!--f-->
 
         <a href="#" id="deconnexion"><button id="button">
           <p><img src="https://image.flaticon.com/icons/png/512/64/64495.png" id="buttondeconnexion"> Gestion  </p>
         </button></a>
          <button  class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item"  [routerLink]="['/admin/',id]" href="#">   Liste    des utilisateurs</a>
-    <a class="dropdown-item" [routerLink]="['/modification']" href="#"> Modifier  un utilisateur</a>
-    <a class="dropdown-item" [routerLink]="['/inscription']" href="#">Ajouter un utilisateur</a>
+    <a class="dropdown-item" [routerLink]="['/admin',id.value]" href="#">   Liste    des utilisateurs</a>
+    <a class="dropdown-item" [routerLink]="['/inscription',id.value]"href="#">Ajouter un utilisateur</a>
   </div>
 </button > <!--f1-->
 
   <br><br><br>
-    <a href="#" id="deconnexion"><button id="button">
+    <a [routerLink]="['/finance',id.value]" href="#" id="deconnexion"><button id="button">
     <p><img src="https://icons-for-free.com/iconfiles/png/512/finance+money+icon-1320167749140141327.png"
         id="buttondeconnexion">Finance </p>
   </button></a> <!--f2-->
 
                <br><br><br><br>
-      <a href="#" id="deconnexion"><button id="button">
+      <a [routerLink]="['/formateur',id.value]"href="#" id="deconnexion"><button id="button">
           <p><img src="https://image.flaticon.com/icons/png/512/65/65882.png" id="buttondeconnexion"> Formateur </p>
         </button></a><br><br>
       <br><br><br> <!--f3-->
 
-      <a href="#" id="deconnexion"><button id="button">
+      <a [routerLink]="['/etudiant',id.value]" href="#" id="deconnexion"><button id="button">
         <p><img src="https://latelierduformateur.fr/wp-content/uploads/2017/07/computer-icon-2429310_1920-300x300.png"
             id="buttondeconnexion"> Etudiant </p>
       </button></a><br>
         <br><br><br> <!--F4-->
 
-        <a href="#" id="deconnexion"><button id="button">
-          <p><img src="https://img.icons8.com/material-sharp/452/dashboard.png" id="buttondeconnexion"> Tableau de bord
-          </p>
-        </button></a><br>
-      <br><br><br>
 
-      <a href="#" id="deconnexion"><button id="button">
+      <a [routerLink]="['/login']" href="#" id="deconnexion"><button id="button">
         <p><img
             src="https://library.kissclipart.com/20181201/ae/kissclipart-dconnexion-icon-clipart-computer-icons-a5e702d3a1f49f3a.png"
             id="buttondeconnexion"> Deconnexion </p>
