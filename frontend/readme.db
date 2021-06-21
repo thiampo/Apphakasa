@@ -10,9 +10,16 @@
 # demarrer le serveur backend
 # taper la commande dans le terminal
 7-  npm start
+8-List de toutes les bases les tables de la base de donnée
+	Messages
+    SequelizeMeta	
+    Users
+    id                      mail              password                    Prenom                Nom               creatAt               updateAt                role
+    'id utilisateur'      'mail obligatoir'  'mot de pass auto generé'   'prenom utilisateur'  'nom utilisateur'  "date de creation"   "date de modification"  "admin, finance,formateur ou eudiant"
+
 # aller dans le dossier front qui contient la partie front
 # taper la commande dans le terminal pour lancer le serveur
-8- ng serve
+9- ng serve
 # la page dans un navigateur
 # connecter vous avec les identifiants suivants :
 admin par defaut
